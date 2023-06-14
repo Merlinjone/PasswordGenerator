@@ -6,7 +6,11 @@ import java.lang.*;
 
 public class PasswordGenerator {
     public static void main(String[] args) {
-        int passwordLength=8;
+        int passwordLength;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Length of the password:");
+        passwordLength =sc.nextInt();
+
         String Letters="qwertyuioplkjhgfdsazxcvbnm"+"QWERTYUIOPLKJHGFDSAZXCVBNM"+"!@#$%^&*<>?/";
         String generatedPassword=createPassword(passwordLength,Letters);
         System.out.println(generatedPassword);
